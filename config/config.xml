@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <image schemaversion="5.3" name="tbz-suse-12.3">
+	<description type="system">
+		<author>yoshi314</author>
+		<contact>yoshi314@gmail.com</contact>
+		<specification>suse-12.3</specification>
+	</description>
+	<preferences>
+	
+		<!-- this is when you want to build oem type image, not needed here -->
+		<type image="oem" boot="oemboot/suse-12.3" filesystem="ext3" installiso="true">
+		<oemconfig>
+			<oem-systemsize>4096</oem-systemsize>
+		</oemconfig>
+		</type>
+
+		<!-- this is for a vm appliance generation. not necessary here. -->
+		<type image="vmx" primary="true" filesystem="ext3" boot="vmxboot/suse-12.3" format="ovf" bootloader="grub">
+		    <machine memory="1024" guestOS="sles" HWversion="4" ncpus="1" ovftype="vmware">
+                                <vmdisk controller="ide" id="0" />
+                        </machine> 
+		    <systemdisk name="cw">
+			<volume name="opt" size="2G"/>
+		    </systemdisk>
+		</type>
+
+		<type image="tbz" />
+		<version>1.0.0</version>
+		<packagemanager>zypper</packagemanager>
+		<locale>en_US</locale>
+		<keytable>pl.map.gz</keytable>
+		<timezone>Europe/Warsaw</timezone>
+		<boot-theme>openSUSE</boot-theme>
+	</preferences>
+
+
+<!-- tweak root pass to your liking -->
+	<users group="root">
+		<user home="/root" name="root" shell="/bin/bash" pwd="rootpassword" pwdformat="plain" />
+	</users>
+
+
+<!-- various repositories to use, we mostly need oss one to setup the base system -->
+
+	<repository type="yast2" alias="repo-non-oss">
+		<source path="http://download.opensuse.org/distribution/12.3/repo/non-oss/"/>
+	</repository>
+
+	<repository type="yast2" alias="updates">
+		<source path="http://download.opensuse.org/update/12.3/"/>
+	</repository>
+
+	<repository type="yast2" alias="repo-oss">
+		<source path="http://download.opensuse.org/distribution/12.3/repo/oss/"/>
+	</repository>
+
+	<packages type="bootstrap" patternType="plusRecommended">
+
+	<!-- just the base pattern packages -->
+	<opensusePattern name="base"/>
+
+	</packages>
+</image>
