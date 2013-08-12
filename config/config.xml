@@ -58,6 +58,7 @@
 
 	<!-- just the base pattern packages -->
 	<opensusePattern name="base"/>
+	<package name="zypper"/>
 
 	</packages>
 </image>
