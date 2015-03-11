@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <image schemaversion="5.3" name="tbz-suse-12.3">
+    <image schemaversion="5.3" name="tbz-suse-13.2">
 	<description type="system">
 		<author>yoshi314</author>
 		<contact>yoshi314@gmail.com</contact>
-		<specification>suse-12.3</specification>
+		<specification>suse-13.2</specification>
 	</description>
 	<preferences>
 	
 		<!-- this is when you want to build oem type image, not needed here -->
-		<type image="oem" boot="oemboot/suse-12.3" filesystem="ext3" installiso="true">
+		<type image="oem" boot="oemboot/suse-13.2" filesystem="ext3" installiso="true">
 		<oemconfig>
 			<oem-systemsize>4096</oem-systemsize>
 		</oemconfig>
 		</type>
 
 		<!-- this is for a vm appliance generation. not necessary here. -->
-		<type image="vmx" primary="true" filesystem="ext3" boot="vmxboot/suse-12.3" format="ovf" bootloader="grub">
+		<type image="vmx" primary="true" filesystem="ext3" boot="vmxboot/suse-13.2" format="ovf" bootloader="grub">
 		    <machine memory="1024" guestOS="sles" HWversion="4" ncpus="1" ovftype="vmware">
                                 <vmdisk controller="ide" id="0" />
                         </machine> 
@@ -43,15 +43,15 @@
 <!-- various repositories to use, we mostly need oss one to setup the base system -->
 
 	<repository type="yast2" alias="repo-non-oss">
-		<source path="http://download.opensuse.org/distribution/12.3/repo/non-oss/"/>
+		<source path="http://download.opensuse.org/distribution/13.2/repo/non-oss/"/>
 	</repository>
 
 	<repository type="yast2" alias="updates">
-		<source path="http://download.opensuse.org/update/12.3/"/>
+		<source path="http://download.opensuse.org/update/13.2/"/>
 	</repository>
 
 	<repository type="yast2" alias="repo-oss">
-		<source path="http://download.opensuse.org/distribution/12.3/repo/oss/"/>
+		<source path="http://download.opensuse.org/distribution/13.2/repo/oss/"/>
 	</repository>
 
 	<packages type="bootstrap" patternType="plusRecommended">
