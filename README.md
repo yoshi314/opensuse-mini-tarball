@@ -6,7 +6,7 @@ You will need:
 
 build.sh starts the build process (inspect the file for info how to make 32bit images on 64bit host).
 
-specific settings are in config/config.xml file (e.g. root password)
+specific settings are in config/config.xml file (e.g. root password) , or config-tb/config.xml
 config/config.sh is executed in generated system environment for post-processing. Tweak it to your liking.
 
 clean.sh cleans the build dir to enable rebuilding from scratch.
