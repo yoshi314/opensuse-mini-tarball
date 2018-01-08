@@ -9,11 +9,8 @@ suseSetupProduct
 # feel free to add additional ones/remove (e.g. add packman repo)
 
 zypper ar \
-	"obs://openSUSE:Leap:42.3:Update/standard" \
-	"update repository"
-zypper ar \
-	"obs://openSUSE:Leap:42.3/standard" \
-	"main repository"
+	"obs://openSUSE:Tumbleweed/standard" \
+	"main tumbleweed repository"
 
 
 suseConfig

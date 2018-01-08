@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <image schemaversion="5.3" name="tbz-suse-leap42.3">
+    <image schemaversion="5.3" name="tbz-suse-tumbleweed">
 	<description type="system">
 		<author>yoshi314</author>
 		<contact>yoshi314@gmail.com</contact>
-		<specification>suse-leap42.3</specification>
+		<specification>suse-tumbleweed</specification>
     </description>
 
 	<preferences>
@@ -28,10 +28,7 @@
 <!-- various repositories to use, we mostly need oss one to setup the base system -->
 
   <repository type='rpm-md'>
-    <source path='obs://openSUSE:Leap:42.3:Update/standard'/>
-  </repository>
-  <repository type='rpm-md'>
-    <source path='obs://openSUSE:Leap:42.3/standard'/>
+    <source path='obs://openSUSE:Tumbleweed/standard'/>
 </repository>
 
 
