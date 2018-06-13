@@ -40,7 +40,6 @@
     <package name="zypper"/>
     <package name="suse-build-key"/>
     <package name="openSUSE-release"/>
-    <package name="openSUSE-release-mini"/>
     <package name="krb5"/>
   </packages>
 
@@ -64,6 +63,7 @@
     <package name='glibc-locale'/>
     <package name='module-init-tools'/>
     <package name='openSUSE-release'/>
+    <package name='timezone'/>
   </packages>
 
 

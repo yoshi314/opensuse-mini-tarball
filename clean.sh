@@ -1,4 +1,5 @@
 #!/bin/bash
 
 rm -rf system-image
-rm -rf tbz/* oem/* vmx/*
+rm -rf system-image-tb
+#rm -rf tbz/* oem/* vmx/*

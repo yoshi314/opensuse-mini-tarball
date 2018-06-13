@@ -8,9 +8,9 @@ suseSetupProduct
 
 # feel free to add additional ones/remove (e.g. add packman repo)
 
-zypper ar \
-	"obs://openSUSE:Tumbleweed/standard" \
-	"main tumbleweed repository"
+zypper ar http://download.opensuse.org/tumbleweed/repo/oss/ oss
+zypper ar http://download.opensuse.org/tumbleweed/repo/non-oss/ non-oss
+
 
 
 suseConfig

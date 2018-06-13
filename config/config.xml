@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <image schemaversion="5.3" name="tbz-suse-leap42.3">
+    <image schemaversion="5.3" name="tbz-suse-leap15">
 	<description type="system">
 		<author>yoshi314</author>
 		<contact>yoshi314@gmail.com</contact>
-		<specification>suse-leap42.3</specification>
+		<specification>suse-leap15</specification>
     </description>
 
 	<preferences>
@@ -28,22 +28,20 @@
 <!-- various repositories to use, we mostly need oss one to setup the base system -->
 
   <repository type='rpm-md'>
-    <source path='obs://openSUSE:Leap:42.3:Update/standard'/>
+    <source path='obs://openSUSE:Leap:15.0:Update/standard'/>
   </repository>
   <repository type='rpm-md'>
-    <source path='obs://openSUSE:Leap:42.3/standard'/>
+    <source path='obs://openSUSE:Leap:15.0/standard'/>
 </repository>
 
 
-  <packages type="image">
+<packages type="image">
     <package name="ca-certificates"/>
     <package name="ca-certificates-mozilla"/>
     <package name="coreutils"/>
     <package name="iputils"/>
     <package name="zypper"/>
-    <package name="suse-build-key"/>
     <package name="openSUSE-release"/>
-    <package name="openSUSE-release-mini"/>
     <package name="krb5"/>
   </packages>
 
@@ -63,10 +61,13 @@
     <package name="udev"/>
   </packages>
   <packages type='bootstrap'>
+    <package name="suse-build-key"/>
+
     <package name='filesystem'/>
     <package name='glibc-locale'/>
     <package name='module-init-tools'/>
     <package name='openSUSE-release'/>
+    <package name='timezone'/>
   </packages>
 
 
