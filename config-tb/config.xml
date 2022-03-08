@@ -64,6 +64,7 @@
     <package name='module-init-tools'/>
     <package name='openSUSE-release'/>
     <package name='timezone'/>
+    <package name='shadow' />
   </packages>
 
 

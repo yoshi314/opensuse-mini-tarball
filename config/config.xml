@@ -28,10 +28,10 @@
 <!-- various repositories to use, we mostly need oss one to setup the base system -->
 
   <repository type='rpm-md'>
-    <source path='obs://openSUSE:Leap:15.0:Update/standard'/>
+    <source path='obs://openSUSE:Leap:15.4:Update/standard'/>
   </repository>
   <repository type='rpm-md'>
-    <source path='obs://openSUSE:Leap:15.0/standard'/>
+    <source path='obs://openSUSE:Leap:15.4/standard'/>
 </repository>
 
 
@@ -61,13 +61,14 @@
     <package name="udev"/>
   </packages>
   <packages type='bootstrap'>
-    <package name="suse-build-key"/>
+    <package name="openSUSE-build-key"/>
 
     <package name='filesystem'/>
     <package name='glibc-locale'/>
     <package name='module-init-tools'/>
     <package name='openSUSE-release'/>
     <package name='timezone'/>
+    <package name='shadow' />
   </packages>
 
 

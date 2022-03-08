@@ -11,8 +11,4 @@ suseSetupProduct
 zypper ar http://download.opensuse.org/tumbleweed/repo/oss/ oss
 zypper ar http://download.opensuse.org/tumbleweed/repo/non-oss/ non-oss
 
-
-
-suseConfig
-baseCleanMount
 exit 0
